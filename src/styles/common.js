@@ -4,6 +4,8 @@ import { COLORS } from '../styles/colors';
 export const common = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop:40,
+    backgroundColor: COLORS.bacground
   },
   centeredContainer: {
     flex: 1,
