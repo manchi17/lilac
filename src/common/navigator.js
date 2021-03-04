@@ -1,7 +1,14 @@
 import React from "react";
+import { View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { Ionicons,  Foundation,FontAwesome,FontAwesome5,MaterialCommunityIcons } from "@expo/vector-icons";
+import {
+  Ionicons,
+  Foundation,
+  FontAwesome,
+  FontAwesome5,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
 import Home from "../screens/home";
 import Cartoon from "../screens/cartoon";
 import News from "../screens/news";
@@ -18,8 +25,6 @@ export default function Navigator() {
         drawerStyle={{ width: "20%" }}
         drawerContentOptions={{
           itemStyle: {
-            borderLeftWidth: 3,
-            borderLeftColor: COLORS.blue,
             marginLeft: 0,
             borderRadius: 0,
             marginVertical: 10,
@@ -32,12 +37,24 @@ export default function Navigator() {
           component={Home}
           options={{
             drawerLabel: "",
-            drawerIcon: ({ focused, size }) => (
-              <Ionicons
-                name="md-home"
-                size={30}
-                color={focused ? COLORS.blue : COLORS.grey}
-              />
+            drawerIcon: ({ focused }) => (
+              <View
+                style={
+                  focused
+                    ? {
+                        borderLeftColor: COLORS.blue,
+                        borderLeftWidth: 2,
+                        paddingLeft: 5,
+                      }
+                    : null
+                }
+              >
+                <Ionicons
+                  name="md-home"
+                  size={30}
+                  color={focused ? COLORS.blue : COLORS.grey}
+                />
+              </View>
             ),
           }}
         />
@@ -46,12 +63,24 @@ export default function Navigator() {
           component={Cartoon}
           options={{
             drawerLabel: "",
-            drawerIcon: ({ focused, size }) => (
-              <Ionicons
-                name="image"
-                size={30}
-                color={focused ? COLORS.blue : COLORS.grey}
-              />
+            drawerIcon: ({ focused }) => (
+              <View
+                style={
+                  focused
+                    ? {
+                        borderLeftColor: COLORS.blue,
+                        borderLeftWidth: 2,
+                        paddingLeft: 5,
+                      }
+                    : null
+                }
+              >
+                <Ionicons
+                  name="image"
+                  size={30}
+                  color={focused ? COLORS.blue : COLORS.grey}
+                />
+              </View>
             ),
           }}
         />
@@ -60,12 +89,24 @@ export default function Navigator() {
           component={News}
           options={{
             drawerLabel: "",
-            drawerIcon: ({ focused, size }) => (
-              <Ionicons name="newspaper-sharp"
-            
-                size={30}
-                color={focused ? COLORS.blue : COLORS.grey}
-              />
+            drawerIcon: ({ focused }) => (
+              <View
+                style={
+                  focused
+                    ? {
+                        borderLeftColor: COLORS.blue,
+                        borderLeftWidth: 2,
+                        paddingLeft: 5,
+                      }
+                    : null
+                }
+              >
+                <Ionicons
+                  name="newspaper-sharp"
+                  size={30}
+                  color={focused ? COLORS.blue : COLORS.grey}
+                />
+              </View>
             ),
           }}
         />
@@ -74,12 +115,24 @@ export default function Navigator() {
           component={News}
           options={{
             drawerLabel: "",
-            drawerIcon: ({ focused, size }) => (
-              <Foundation
-                name="graph-pie"
-                size={30}
-                color={focused ? COLORS.blue : COLORS.grey}
-              />
+            drawerIcon: ({ focused }) => (
+              <View
+                style={
+                  focused
+                    ? {
+                        borderLeftColor: COLORS.blue,
+                        borderLeftWidth: 2,
+                        paddingLeft: 5,
+                      }
+                    : null
+                }
+              >
+                <Foundation
+                  name="graph-pie"
+                  size={30}
+                  color={focused ? COLORS.blue : COLORS.grey}
+                />
+              </View>
             ),
           }}
         />
@@ -88,42 +141,79 @@ export default function Navigator() {
           component={News}
           options={{
             drawerLabel: "",
-            drawerIcon: ({ focused, size }) => (
-              <FontAwesome name="folder"
-               
-                size={30}
-                color={focused ? COLORS.blue : COLORS.grey}
-              />
+            drawerIcon: ({ focused }) => (
+              <View
+                style={
+                  focused
+                    ? {
+                        borderLeftColor: COLORS.blue,
+                        borderLeftWidth: 2,
+                        paddingLeft: 5,
+                      }
+                    : null
+                }
+              >
+                <FontAwesome
+                  name="folder"
+                  size={30}
+                  color={focused ? COLORS.blue : COLORS.grey}
+                />
+              </View>
             ),
           }}
         />
-         <Drawer.Screen
+        <Drawer.Screen
           name="Game"
           component={News}
           options={{
             drawerLabel: "",
-            drawerIcon: ({ focused, size }) => (
-              <MaterialCommunityIcons name="gamepad-circle"
-                size={30}
-                color={focused ? COLORS.blue : COLORS.grey}
-              />
+            drawerIcon: ({ focused }) => (
+              <View
+                style={
+                  focused
+                    ? {
+                        borderLeftColor: COLORS.blue,
+                        borderLeftWidth: 2,
+                        paddingLeft: 5,
+                      }
+                    : null
+                }
+              >
+                <MaterialCommunityIcons
+                  name="gamepad-circle"
+                  size={30}
+                  color={focused ? COLORS.blue : COLORS.grey}
+                />
+              </View>
             ),
           }}
         />
-         <Drawer.Screen
+        <Drawer.Screen
           name="Help"
           component={News}
           options={{
             drawerLabel: "",
-            drawerIcon: ({ focused, size }) => (
-              <FontAwesome5 name="hands-helping"
-                size={30}
-                color={focused ? COLORS.blue : COLORS.grey}
-              />
+            drawerIcon: ({ focused }) => (
+              <View
+                style={
+                  focused
+                    ? {
+                        borderLeftColor: COLORS.blue,
+                        borderLeftWidth: 2,
+                        paddingLeft: 5,
+                      }
+                    : null
+                }
+              >
+                <FontAwesome5
+                  name="hands-helping"
+                  size={30}
+                  color={focused ? COLORS.blue : COLORS.grey}
+                />
+              </View>
             ),
           }}
         />
-         
       </Drawer.Navigator>
     </NavigationContainer>
   );
