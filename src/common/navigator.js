@@ -11,7 +11,7 @@ import {
 } from "@expo/vector-icons";
 import Home from "../screens/home";
 import Cartoon from "../screens/cartoon";
-import News from "../screens/news";
+import Quote from "../screens/quote";
 import { COLORS } from "../styles/colors";
 
 const Drawer = createDrawerNavigator();
@@ -85,8 +85,8 @@ export default function Navigator() {
           }}
         />
         <Drawer.Screen
-          name="News"
-          component={News}
+          name="Quote"
+          component={Quote}
           options={{
             drawerLabel: "",
             drawerIcon: ({ focused }) => (
@@ -112,7 +112,7 @@ export default function Navigator() {
         />
         <Drawer.Screen
           name="Graph"
-          component={News}
+          component={Home}
           options={{
             drawerLabel: "",
             drawerIcon: ({ focused }) => (
@@ -138,7 +138,7 @@ export default function Navigator() {
         />
         <Drawer.Screen
           name="Folder"
-          component={News}
+          component={Home}
           options={{
             drawerLabel: "",
             drawerIcon: ({ focused }) => (
@@ -164,7 +164,7 @@ export default function Navigator() {
         />
         <Drawer.Screen
           name="Game"
-          component={News}
+          component={Home}
           options={{
             drawerLabel: "",
             drawerIcon: ({ focused }) => (
@@ -190,7 +190,7 @@ export default function Navigator() {
         />
         <Drawer.Screen
           name="Help"
-          component={News}
+          component={Home}
           options={{
             drawerLabel: "",
             drawerIcon: ({ focused }) => (

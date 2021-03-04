@@ -1,29 +1,52 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+} from "react-native";
+import { Card } from "react-native-paper";
+import { COLORS } from "../styles/colors";
 
 export default function Home() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View
-        style={{
-          alignItems: "center",
-          flex: 8.5,
-          justifyContent: "center",
-        }}
-      >
-        <Text style={styles.line}>Home</Text>
-      </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+        <Card style={styles.card}>
+          <Card.Cover source={require("../../assets/images/car.jpg")} />
+        </Card>
+        <Card style={styles.card}>
+          <Card.Cover source={require("../../assets/images/fer.jpg")} />
+        </Card>
+        <Card style={styles.card}>
+          <Card.Cover source={require("../../assets/images/red.jpg")} />
+        </Card>
+        <Card style={styles.card}>
+          <Card.Cover source={require("../../assets/images/dor.jpg")} />
+        </Card>
+        <Card style={styles.card}>
+          <Card.Cover source={require("../../assets/images/benz.jpg")} />
+        </Card>
+        <Card style={styles.card}>
+          <Card.Cover source={require("../../assets/images/sport.jpg")} />
+        </Card>
+        <Card style={styles.card}>
+          <Card.Cover source={require("../../assets/images/white.jpg")} />
+        </Card>
+      </ScrollView>
     </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1.5,
-    justifyContent: "center",
-    marginLeft: 15,
+    flex: 1,
+    paddingTop:40,
+    backgroundColor: COLORS.bacground,
   },
-  line: {
-    fontSize: 23,
-    fontWeight: "700",
+  scrollView: {
+    margin: 7,
+    
   },
+  card:{marginBottom:10}
 });
