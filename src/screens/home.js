@@ -1,16 +1,15 @@
 import React from "react";
-import {
-  StyleSheet,
-  SafeAreaView,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import { Card } from "react-native-paper";
 import { common } from "../styles/common";
 
 export default function Home() {
   return (
     <SafeAreaView style={common.container}>
-      <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        style={styles.scrollView}
+        showsVerticalScrollIndicator={false}
+      >
         <Card style={styles.card}>
           <Card.Cover source={require("../../assets/images/car.jpg")} />
         </Card>
@@ -37,10 +36,8 @@ export default function Home() {
   );
 }
 const styles = StyleSheet.create({
- 
   scrollView: {
     margin: 7,
-    
   },
-  card:{marginBottom:10}
+  card: { marginBottom: 10 },
 });

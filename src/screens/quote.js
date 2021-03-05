@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
 
   nameText: {
     alignSelf: "flex-end",
-    marginLeft:5,
+    marginLeft: 5,
     color: COLORS.blue,
   },
   quoteText: {

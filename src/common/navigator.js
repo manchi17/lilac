@@ -10,7 +10,7 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import Home from "../screens/home";
-import Cartoon from "../screens/cartoon";
+import Collection from "../screens/collection";
 import Quote from "../screens/quote";
 import { COLORS } from "../styles/colors";
 
@@ -59,8 +59,8 @@ export default function Navigator() {
           }}
         />
         <Drawer.Screen
-          name="Cartoon"
-          component={Cartoon}
+          name="Collection"
+          component={Collection}
           options={{
             drawerLabel: "",
             drawerIcon: ({ focused }) => (
